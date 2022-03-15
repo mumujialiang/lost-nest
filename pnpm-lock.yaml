@@ -28,6 +28,7 @@ specifiers:
   ts-node: ^10.0.0
   tsconfig-paths: ^3.10.1
   typescript: ^4.3.5
+  webpack: ^5.0.0
 
 dependencies:
   '@nestjs/common': registry.npmmirror.com/@nestjs/common/8.4.1_e7ea248743279784063e3708d703abc5
@@ -55,10 +56,11 @@ devDependencies:
   source-map-support: registry.npmmirror.com/source-map-support/0.5.21
   supertest: registry.npmmirror.com/supertest/6.2.2
   ts-jest: registry.npmmirror.com/ts-jest/27.1.3_60149d457e34ffba7d4e845dde6a1263
-  ts-loader: registry.npmmirror.com/ts-loader/9.2.8_typescript@4.6.2
+  ts-loader: registry.npmmirror.com/ts-loader/9.2.8_typescript@4.6.2+webpack@5.66.0
   ts-node: registry.npmmirror.com/ts-node/10.7.0_045cabcbf8818eda83522fe731c87088
   tsconfig-paths: registry.npmmirror.com/tsconfig-paths/3.14.0
   typescript: registry.npmmirror.com/typescript/4.6.2
+  webpack: registry.npmmirror.com/webpack/5.66.0
 
 packages:
 
@@ -1775,7 +1777,7 @@ packages:
       ajv:
         optional: true
     dependencies:
-      ajv: registry.npmmirror.com/ajv/8.9.0
+      ajv: registry.npmmirror.com/ajv/8.10.0
     dev: true
 
   registry.npmmirror.com/ajv-keywords/3.5.2_ajv@6.12.6:
@@ -6097,7 +6099,7 @@ packages:
       yargs-parser: registry.npmmirror.com/yargs-parser/20.2.9
     dev: true
 
-  registry.npmmirror.com/ts-loader/9.2.8_typescript@4.6.2:
+  registry.npmmirror.com/ts-loader/9.2.8_typescript@4.6.2+webpack@5.66.0:
     resolution: {integrity: sha512-gxSak7IHUuRtwKf3FIPSW1VpZcqF9+MBrHOvBp9cjHh+525SjtCIJKVGjRKIAfxBwDGDGCFF00rTfzB1quxdSw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ts-loader/-/ts-loader-9.2.8.tgz}
     id: registry.npmmirror.com/ts-loader/9.2.8
     name: ts-loader
@@ -6112,6 +6114,7 @@ packages:
       micromatch: registry.npmmirror.com/micromatch/4.0.4
       semver: registry.npmmirror.com/semver/7.3.5
       typescript: registry.npmmirror.com/typescript/4.6.2
+      webpack: registry.npmmirror.com/webpack/5.66.0
     dev: true
 
   registry.npmmirror.com/ts-node/10.7.0_045cabcbf8818eda83522fe731c87088:
