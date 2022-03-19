@@ -5,11 +5,14 @@ import {
   Controller,
   Injectable,
   Post,
+  Req,
+  UseGuards,
 } from '@nestjs/common';
-import { ApiOperation, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { Repository } from 'typeorm';
 import { compareSync, genSaltSync, hashSync } from 'bcryptjs';
 import { JwtService } from '@nestjs/jwt';
+import { AuthGuard } from '@nestjs/passport';
 import { RegisterDto } from './dto/register.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { LoginDto } from './dto/login.dto';
@@ -60,5 +63,17 @@ export class AuthController {
       };
     }
     throw new BadRequestException('账号或密码不正确');
+  }
+
+  @Post('user')
+  @ApiOperation({
+    summary: '个人信息',
+  })
+  @ApiBearerAuth()
+  @UseGuards(AuthGuard('jwt'))
+  async user(@Body() dto, @Req() req) {
+    console.log(req);
+
+    return req.user;
   }
 }
