@@ -5,10 +5,10 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const options = new DocumentBuilder()
-    .setTitle('Cats example')
-    .setDescription('The cats API description')
+    .setTitle('失物信息平台的接口文档')
+    .setDescription('')
     .setVersion('1.0')
-    .addTag('cats')
+    .addTag('')
     .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, options);
