@@ -1,4 +1,4 @@
-import { User } from './entity/register.entity';
+import { User } from './entity/user.entity';
 import {
   BadRequestException,
   Body,
