@@ -6,8 +6,6 @@ import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { User } from './auth/entity/user.entity';
 import { CommonModule } from './common/common.module';
-import { PostingModule } from './posting/posting.module';
-import { Posting } from './posting/entity/posting.entity';
 
 @Module({
   imports: [
@@ -18,13 +16,12 @@ import { Posting } from './posting/entity/posting.entity';
       username: 'root',
       password: 'root',
       database: 'test',
-      entities: [User, Posting],
+      entities: [User],
       synchronize: true,
     }),
     AuthModule,
     CommonModule,
     ConfigModule.forRoot(),
-    PostingModule,
   ],
   controllers: [AppController],
   providers: [AppService],
